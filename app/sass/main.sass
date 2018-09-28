@@ -1,0 +1,141 @@
+$main-width: 1000px
+
+
+body
+	background-color: #1b232b
+	background-image: url(../img/background.jpg)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center top
+	width: 100%
+	height: 100vh
+	font-size: 14px
+	color: white
+	font-family: 'Roboto', sans-serif;
+div
+	overflow: hidden
+main
+	margin-top: 45px
+	margin-left: auto
+	margin-right: auto
+	border: 0.5px solid #495e75
+	width: $main-width
+	border-radius: 8px
+	padding-top: 19px
+	padding-bottom: 19px
+	background-color: rgba(255,255,255,0.02)
+	.container-fluid
+		overflow: visible
+		.row
+			overflow: visible
+.nav-pills, .dropdown-menu
+	border: 1px solid #53e9ff
+	border-radius: 5px
+.caret
+	display: block
+	float: right
+	margin-top: 7px
+.dropdown-toggle, .dropdown, .dropdown-menu
+	width: 100%
+	color: white
+	background: #1d252b
+.dropdown-menu>li>a
+	color: white
+.nav>li>a:focus, .nav>li>a:hover, .nav>li>a:active, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover
+	background-color: #1d252b
+	background-image: none
+	color: white
+.dropdown-menu
+	margin-top: 10px
+.nav-pills
+	margin-top: 8px
+
+h1
+	margin-top: 10px
+	font-size: 32px
+	font-weight: 600
+	text-align: center
+.select-currency
+	overflow: visible
+.coins-container
+	width: $main-width
+	margin-top: 50px
+.coin-name
+	font-weight: 600
+	text-align: center
+	font-size: 22px
+
+.cont-eth
+	background-image: url(../img/ethereum.png)
+	background-color: #2d4934
+.cont-ltc
+	background-image: url(../img/litecoin.png)
+	background-color: #323232
+.cont-btc
+	background-image: url(../img/bitcoin.png)
+	background-color: #2f1102
+.coin-block
+	background-size: contain
+	background-repeat: no-repeat
+	text-align: center
+	border-radius: 15px
+	padding-bottom: 30px
+	width: 300px
+	img
+		display: inline-block
+	div
+		text-align: left
+		padding-left: 30px
+.coin-price
+	font-size: 20px
+	font-weight: bold
+	margin-top: 25px
+.coin-pick
+	margin-top: 10px
+	font-weight: 600
+	overflow: visible
+.coin-changes
+	margin-top: 10px
+	color: rgba(255,255,255,0.25)
+	font-weight: 600
+	div
+		padding-left: 0px
+.switch
+	float: right
+	margin-top: 0px
+	margin-right: 30px
+.switch-slider-off:after, .switch-label:active .switch-slider-off:after,
+.switch-check:focus + .switch-label .switch-slider-off:after
+	background: url(../img/radio.png)
+.dropdown-menu
+	li:nth-child(4)
+		.currency-selector
+			display: none
+.price-value, .change-hour-value, .change-day-value, .change-week-value, .change-month-value
+	display: inline-block
+	float: right
+	padding-right: 30px
+.change-hour-value, .change-day-value, .change-week-value, .change-month-value
+	color: #70c446
+	font-size: 16px
+.down-value
+	color: #c80e24
+
+@media screen and (max-width: 1000px)
+	main, .coins-container
+		width: 450px
+		margin: 15px auto
+	.coin-block
+		margin: 15px auto
+@media screen and (max-width: 400px)
+	.coin-block
+		width: 95%
+	main, .coins-container
+		width: 95%
+		margin: 15px auto
+		
+
+
+
+
+

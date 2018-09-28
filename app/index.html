@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="#">
+	<meta name="description" content="#">
+    <title>Coins</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!-- CSS-->
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- JS -->
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+  </head>
+  <body>
+	<main>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8">
+					<h1>
+						Select currency to exchange:
+					</h1>
+				</div>
+				<div class="col-md-4 select-currency">
+					<ul class="nav nav-pills">
+						<li class="dropdown">
+							<a class="dropdown-toggle" id="currency" data-toggle="dropdown" href="#"><span id="currencySpan" value="USD">USD</span> <b class="caret"></b></a>
+								<ul id="menu1" class="dropdown-menu">
+									<li><a href="#" id="EURcurr" onclick="newCurrency('EUR')" data="EUR" class="currency-selector">EUR</a></li>
+									<li><a href="#" id="RUBcurr" onclick="newCurrency('RUB')" data="RUB" class="currency-selector">RUB</a></li>
+									<li><a href="#" id="GBPcurr" onclick="newCurrency('GBP')" data="GBP" class="currency-selector">GBP</a></li>
+									<li><a href="#" id="USDcurr" onclick="newCurrency('USD')" data="USD" class="currency-selector">USD</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="container-fluid coins-container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="coin-block cont-eth">
+					<h3 class="coin-name">Ethereum</h3>
+					<img src="img/ethMonS.png" alt="eth" class="coin-img">
+					<div class="coin-price">
+						<span class="price-title">
+							Price:
+						</span>
+						<span class="price-value" id="price-ETH">
+
+						</span>
+					</div>
+					<div class="coin-pick">
+						<span class="pick-title">
+							Percent change
+						</span>
+						<div class="switch">
+							<input type="checkbox" id="switch-ETH" class="switch-check" onclick="changeTypeView('ETH')">
+							<label for="switch-ETH" class="switch-label">
+								Switch
+								<span class="switch-slider switch-slider-on"></span>
+								<span class="switch-slider switch-slider-off"></span>
+							</label>
+						</div>
+					</div>
+					<div class="coin-changes">
+						<div class="coin-changes-hour">
+							<span class="change-hour-title">
+								Hour change
+							</span>
+							<span class="change-hour-value" id="hour-ETH">
+							</span>
+							<span class="change-hour-value down-value" id="hour-ETHdown">
+							</span>
+						</div>
+						<div class="coin-changes-day">
+							<span class="change-day-title">
+								Day change
+							</span>
+							<span class="change-day-value" id="day-ETH">
+							</span>
+							<span class="change-day-value down-value" id="day-ETHdown">
+							</span>
+						</div>
+						<div class="coin-changes-week">
+							<span class="change-week-title">
+								Week change
+							</span>
+							<span class="change-week-value" id="week-ETH">
+							</span>
+							<span class="change-week-value down-value" id="week-ETHdown">
+							</span>
+						</div>
+						<div class="coin-changes-month">
+							<span class="change-month-title">
+								Month change
+							</span>
+							<span class="change-month-value" id="month-ETH">
+							</span>
+							<span class="change-month-value down-value" id="month-ETHdown">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="coin-block cont-ltc">
+					<h3 class="coin-name">Litecoin</h3>
+					<img src="img/ltcMonS.png" alt="ltc" class="coin-img">
+					<div class="coin-price">
+						<span class="price-title">
+							Price:
+						</span>
+						<span class="price-value" id="price-LTC">
+							
+						</span>
+					</div>
+					<div class="coin-pick">
+						<span class="pick-title">
+							Percent change
+						</span>
+						<div class="switch">
+							<input type="checkbox" id="switch-LTC" class="switch-check" onclick="changeTypeView('LTC')">
+							<label for="switch-LTC" class="switch-label">
+								Switch
+								<span class="switch-slider switch-slider-on"></span>
+								<span class="switch-slider switch-slider-off"></span>
+							</label>
+						</div>
+					</div>
+					<div class="coin-changes">
+						<div class="coin-changes-hour">
+							<span class="change-hour-title">
+								Hour change
+							</span>
+							<span class="change-hour-value" id="hour-LTC">
+							</span>
+							<span class="change-hour-value down-value" id="hour-LTCdown">
+							</span>
+						</div>
+						<div class="coin-changes-day">
+							<span class="change-day-title">
+								Day change
+							</span>
+							<span class="change-day-value" id="day-LTC">
+							</span>
+							<span class="change-day-value down-value" id="day-LTCdown">
+							</span>
+						</div>
+						<div class="coin-changes-week">
+							<span class="change-week-title">
+								Week change
+							</span>
+							<span class="change-week-value" id="week-LTC">
+							</span>
+							<span class="change-week-value down-value" id="week-LTCdown">
+							</span>
+						</div>
+						<div class="coin-changes-month">
+							<span class="change-month-title">
+								Month change
+							</span>
+							<span class="change-month-value" id="month-LTC">
+							</span>
+							<span class="change-month-value down-value" id="month-LTCdown">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="coin-block cont-btc">
+					<h3 class="coin-name">Bitcoin</h3>
+					<img src="img/btcMonS.png" alt="btc" class="coin-img">
+					<div class="coin-price">
+						<span class="price-title">
+							Price:
+						</span>
+						<span class="price-value" id="price-BTC">
+							
+						</span>
+					</div>
+					<div class="coin-pick">
+						<span class="pick-title">
+							Percent change
+						</span>
+						<div class="switch">
+							<input type="checkbox" id="switch-BTC" class="switch-check" onclick="changeTypeView('BTC')">
+							<label for="switch-BTC" class="switch-label">
+								Switch
+								<span class="switch-slider switch-slider-on"></span>
+								<span class="switch-slider switch-slider-off"></span>
+							</label>
+						</div>
+					</div>
+					<div class="coin-changes">
+						<div class="coin-changes-hour">
+							<span class="change-hour-title">
+								Hour change
+							</span>
+							<span class="change-hour-value" id="hour-BTC">
+							</span>
+							<span class="change-hour-value down-value" id="hour-BTCdown">
+							</span>
+						</div>
+						<div class="coin-changes-day">
+							<span class="change-day-title">
+								Day change
+							</span>
+							<span class="change-day-value" id="day-BTC">
+							</span>
+							<span class="change-day-value down-value" id="day-BTCdown">
+							</span>
+						</div>
+						<div class="coin-changes-week">
+							<span class="change-week-title">
+								Week change
+							</span>
+							<span class="change-week-value" id="week-BTC">
+							</span>
+							<span class="change-week-value down-value" id="week-BTCdown">
+							</span>
+						</div>
+						<div class="coin-changes-month">
+							<span class="change-month-title">
+								Month change
+							</span>
+							<span class="change-month-value" id="month-BTC">
+							</span>
+							<span class="change-week-value down-value" id="month-BTCdown">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	   
+
+   
+    
+  
+	<script src="js/libs.min.js"></script>
+	<script src="js/common.js"></script>
+  </body>
+</html>
+
+
+
+
